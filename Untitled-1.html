@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ghost Page</title>
+<style>
+body
+{
+	background-image:none;
+	background-color:#000;
+}
+div
+{
+	margin-top:100px;
+	margin-left:200px;
+	width:500px;
+	height:500px;
+}
+img
+{
+	width:500px;
+	height:500px;
+}
+
+
+</style>
+<script>
+
+	var images= new Array;
+ 
+   var i,id;
+    function change90()
+    {
+		images[0]="url(Horror_Show.jpg)";
+		images[1]="url(Reunited__seriously_scary_3_by_steelgohst.jpg)";
+		images[2]="url(FireSkull2.jpg)";
+
+	     i++;
+	     if(i<3)
+		document.getElementById('b1').style.backgroundImage=images[i];
+		 else
+		 {
+			  i=0;  
+		document.getElementById('b1').style.backgroundImage=images[i];
+	   	 }
+	}
+   
+
+	function change09()
+    {
+		document.getElementById('img33').src="scary_05.gif";
+		images[0]="Horror_Show.jpg";
+	     i=0;
+		document.getElementById('b1').style.backgroundImage='url(images[0])';
+	  	 id=window.setInterval('change90()',200);
+
+	}
+	function change19()
+    {
+		document.getElementById('img33').src="555676_333742806709500_842623168_n.jpg";
+		document.getElementById('b1').style.backgroundImage='none';
+		window.clearInterval(id);
+    }
+</script>
+</head>
+
+<body id="b1">
+		<div id="d1">
+         <a href="car.html">
+            <div id="d2" onMouseOver="change09()" onMouseOut="change19()">
+            <img src= "555676_333742806709500_842623168_n.jpg" id="img33" class="out" / >
+            </div>
+         </a>
+         </div>
+</body>
+</html>
